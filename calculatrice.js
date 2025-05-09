@@ -26,13 +26,6 @@ function f_calc(id, operation) {
             updateDisplay();
             break;
             
-        case '%': 
-            if (currentValue) {
-                currentValue = (parseFloat(currentValue) / 100).toString();
-                updateDisplay();
-            }
-            break;
-            
         case '+-': 
             if (currentValue) {
                 currentValue = (-parseFloat(currentValue)).toString();
@@ -72,6 +65,7 @@ function calculateResult() {
         case '-': result = num1 - num2; break;
         case '*': result = num1 * num2; break;
         case '/': result = num1 / num2; break;
+        case '%': result = num1 % num2; break;
     }
     
     currentValue = result.toString();
